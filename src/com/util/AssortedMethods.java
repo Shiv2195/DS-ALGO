@@ -1,8 +1,9 @@
 package com.util;
 
 
-
-
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 public class AssortedMethods {
     public static int randomInt(int n) {
@@ -83,4 +84,48 @@ public class AssortedMethods {
         return head;
     }
 
+    public static TreeNode createTreeFromArray(int[] array) {
+        if (array.length > 0) {
+            TreeNode root = new TreeNode(array[0]);
+            java.util.Queue<TreeNode> queue = new java.util.LinkedList<TreeNode>();
+            queue.add(root);
+            boolean done = false;
+            int i = 1;
+            while (!done) {
+                TreeNode r = (TreeNode) queue.element();
+                if (r.left == null) {
+                    r.left = new TreeNode(array[i]);
+                    i++;
+                    queue.add(r.left);
+                } else if (r.right == null) {
+                    r.right = new TreeNode(array[i]);
+                    i++;
+                    queue.add(r.right);
+                } else {
+                    queue.remove();
+                }
+                if (i == array.length) {
+                    done = true;
+                }
+            }
+            return root;
+        } else {
+            return null;
+        }
+    }
+
+
+    public static void printResult(ArrayList<LinkedList<TreeNode>> result) {
+        int depth = 0;
+        for (LinkedList<TreeNode> entry : result) {
+            Iterator<TreeNode> i = entry.listIterator();
+            System.out.print("Link list at depth " + depth + ":");
+            while (i.hasNext()) {
+                System.out.print(" " + ((TreeNode) i.next()).data);
+            }
+            System.out.println();
+            depth++;
+        }
+
+    }
 }
