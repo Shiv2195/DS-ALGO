@@ -121,7 +121,7 @@ public class AssortedMethods {
             Iterator<TreeNode> i = entry.listIterator();
             System.out.print("Link list at depth " + depth + ":");
             while (i.hasNext()) {
-                System.out.print(" " + ((TreeNode) i.next()).data);
+                System.out.print(" " + ( i.next()).data);
             }
             System.out.println();
             depth++;
