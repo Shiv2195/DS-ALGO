@@ -44,7 +44,7 @@ public class RouteBtwnTwoNode {
     private static boolean search(Graph g, Node start, Node end) {
         if (start == end) return true;
 
-        LinkedList<Node> q = new LinkedList<Node>();
+        LinkedList<Node> q = new LinkedList<>();
 
         for (Node u : g.getNodes()) {
             u.state = State.Unvisited;
