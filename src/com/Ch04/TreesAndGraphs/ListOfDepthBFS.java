@@ -8,9 +8,6 @@ import java.util.LinkedList;
 
 public class ListOfDepthBFS {
 
-
-
-
     public static void main(String[] args) {
         int[] nodes_flattened = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         TreeNode root = AssortedMethods.createTreeFromArray(nodes_flattened);
