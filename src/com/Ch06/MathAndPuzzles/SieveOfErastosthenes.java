@@ -3,15 +3,6 @@ package com.Ch06.MathAndPuzzles;
 public class SieveOfErastosthenes {
 
 
-    public static void main(String[] args) {
-        boolean[] primes = sieveOfEratosthenes(4);
-        for (int i = 0; i < primes.length; i++) {
-            if (primes[i]) {
-                System.out.println(i);
-            }
-        }
-    }
-
     private static boolean[] sieveOfEratosthenes(int max) {
         boolean[] flags = new boolean[max + 1];
 
@@ -50,5 +41,15 @@ public class SieveOfErastosthenes {
         }
 
     }
+
+    public static void main(String[] args) {
+        boolean[] primes = sieveOfEratosthenes(4);
+        for (int i = 0; i < primes.length; i++) {
+            if (primes[i]) {
+                System.out.println(i);
+            }
+        }
+    }
+
 
 }
