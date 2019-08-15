@@ -1,6 +1,6 @@
 package com.Ch08.RecursionAndDP;
 
-public class TripeStep {
+public class TripleStep {
 
 
     public static int countways(int n) {
